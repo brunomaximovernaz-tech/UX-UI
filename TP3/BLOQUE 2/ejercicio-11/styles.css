@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+.styled-list {
+  list-style: none;
+  padding: 0;
+}
+
+.styled-list li {
+  padding: 10px;
+}
+
+/* Pseudo-clase :nth-child */
+.styled-list li:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.styled-list a {
+  text-decoration: none;
+  color: #2563eb;
+  position: relative;
+}
+
+/* Pseudo-clase :hover */
+.styled-list a:hover {
+  color: #1d4ed8;
+}
+
+/* Pseudo-elemento ::before */
+.styled-list a::before {
+  content: "👉 ";
+}

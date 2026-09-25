@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 19 - Formulario Multi-Step</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form class="multistep-form">
+    <input type="radio" name="step" id="step1" checked>
+    <input type="radio" name="step" id="step2">
+
+    <fieldset class="step-1">
+      <legend>Paso 1: Personales</legend>
+      <label>Nombre completo:</label>
+      <input type="text" required>
+      <label for="step2" class="btn-next">Siguiente</label>
+    </fieldset>
+
+    <fieldset class="step-2">
+      <legend>Paso 2: Cuenta</legend>
+      <label>Email válido:</label>
+      <input type="email" required>
+      <label for="step1" class="btn-prev">Anterior</label>
+      <button type="submit">Finalizar</button>
+    </fieldset>
+  </form>
+</body>
+</html>

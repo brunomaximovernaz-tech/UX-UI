@@ -1,0 +1,36 @@
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #0f172a;
+  --color-primario: #3b82f6;
+  --color-card: #f8fafc;
+  --espaciado: 20px;
+  --borde-radio: 8px;
+}
+
+.dark-mode {
+  --color-fondo: #0f172a;
+  --color-texto: #f8fafc;
+  --color-card: #1e293b;
+  --color-primario: #60a5fa;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: var(--espaciado);
+  font-family: sans-serif;
+}
+
+.card {
+  background-color: var(--color-card);
+  padding: var(--espaciado);
+  border-radius: var(--borde-radio);
+}
+
+.btn {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: var(--borde-radio);
+}

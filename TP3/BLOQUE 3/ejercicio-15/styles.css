@@ -1,0 +1,25 @@
+/* Enfoque Mobile-First */
+body { margin: 0; font-family: sans-serif; }
+
+.responsive-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.sidebar { display: none; } /* Ocultar sidebar en móviles */
+.header, .main, .footer { padding: 20px; background-color: #e2e8f0; }
+
+@media (min-width: 768px) {
+  .responsive-layout {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+  .sidebar { display: block; grid-area: sidebar; background-color: #cbd5e1; }
+  .header { grid-area: header; }
+  .main { grid-area: main; }
+  .footer { grid-area: footer; }
+}

@@ -1,0 +1,19 @@
+body { font-family: sans-serif; padding: 30px; }
+
+.multistep-form input[type="radio"] { display: none; }
+
+fieldset { display: none; border: 1px solid #ccc; padding: 20px; }
+
+#step1:checked ~ .step-1 { display: block; }
+#step2:checked ~ .step-2 { display: block; }
+
+input:required:invalid { border: 2px solid #ef4444; }
+input:required:valid { border: 2px solid #22c55e; }
+
+.btn-next, .btn-prev {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #cbd5e1;
+  cursor: pointer;
+}

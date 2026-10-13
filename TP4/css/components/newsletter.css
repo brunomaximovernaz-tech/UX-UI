@@ -83,6 +83,11 @@
     .newsletter__form { flex-direction: row; justify-content: center; }
     .newsletter__input-wrapper { max-width: 364px; }
     .newsletter__beans { display: block; }
-    .newsletter__beans--left { left: -100px; }
-    .newsletter__beans--right { right: -100px; transform: scaleX(-1); }
+    .newsletter__beans--left {
+        left: -180px;
+        transform: scaleX(-1);
+    }
+    .newsletter__beans--right {
+        right: -180px;
+    }
 }

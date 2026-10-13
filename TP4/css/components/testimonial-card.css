@@ -61,6 +61,19 @@
     font-size: var(--fs-sm);
     color: var(--color-text-soft);
 }
+.testimonial-card__rating {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+.testimonial-card__rating .star {
+    width: 22px;
+    height: 21px;
+}
+.star--muted {
+    opacity: 0.35;
+    filter: grayscale(100%);
+}
 .testimonial-card__text {
     font-family: var(--font-ui);
     font-weight: 500;

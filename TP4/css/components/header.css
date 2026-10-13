@@ -121,24 +121,38 @@
     .header__search {
         width: 61px; /* R3: Tamaño original de 61px en Desktop */
         height: 61px;
+        flex-shrink: 0;
+    }
+
+    .header__menu {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        min-width: 0;
     }
 
     .header__menu-toggle {
         display: none; /* Escondemos la hamburguesa en pantallas grandes */
     }
 
-    /* Forzamos a que la navegación siempre esté visible en desktop, 
-       sin importar si el <details> está abierto o cerrado */
-    .header__nav,
-    .header__menu:not([open]) .header__nav {
-        display: block;
+    .header__nav {
+        display: block !important;
         position: static;
         background-color: transparent; /* Quitamos el fondo oscuro */
         padding: 0;
+        width: auto;
+    }
+
+    .header__menu:not([open]) > .header__nav {
+        display: block !important;
+        visibility: visible;
     }
 
     .header__nav-list {
-        flex-direction: row; /* Links en fila horizontal */
-        gap: 48px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: clamp(16px, 2.5vw, 40px);
+        white-space: nowrap;
     }
 }

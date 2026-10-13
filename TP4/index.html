@@ -47,6 +47,19 @@
         </div>
     </header>
 
+    <script>
+        (() => {
+            const headerMenu = document.querySelector('.header__menu');
+            const desktopBreakpoint = window.matchMedia('(min-width: 1024px)');
+            const syncHeaderMenu = () => {
+                headerMenu.open = desktopBreakpoint.matches;
+            };
+
+            syncHeaderMenu();
+            desktopBreakpoint.addEventListener('change', syncHeaderMenu);
+        })();
+    </script>
+
     <!-- ================= MAIN CONTENT ================= -->
     <main id="main">
         
@@ -103,6 +116,11 @@
                 <h2 id="coffee-title" class="products__title">OUR SPECIAL COFFEE</h2>
                 
                 <div class="carousel">
+                    <!-- Flecha Izquierda -->
+                    <button class="carousel__arrow carousel__arrow--left" aria-label="Anterior" aria-hidden="true" tabindex="-1">
+                        <img src="assets/icons/Arrow.svg" alt="">
+                    </button>
+
                     <ul class="carousel__track">
                         <!-- Tarjeta 1 -->
                         <li class="carousel__slide">
@@ -148,7 +166,7 @@
                         <li class="carousel__slide">
                             <article class="product-card">
                                 <div class="product-card__img-wrapper">
-                                    <img src="assets/img/coffee-4.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
+                                    <img src="assets/img/coffee-4.avif" alt="Cappuccino" class="product-card__img" loading="lazy">
                                     <label class="product-card__fav">
                                         <input type="checkbox" class="sr-only">
                                         <img src="assets/icons/heart.svg" alt="Añadir a favoritos" class="fav-icon">
@@ -186,6 +204,11 @@
 
                         <!-- Podés copiar y pegar el bloque <li> para agregar más tarjetas -->
                     </ul>
+
+                    <!-- Flecha Derecha -->
+                    <button class="carousel__arrow carousel__arrow--right" aria-label="Siguiente" aria-hidden="true" tabindex="-1">
+                        <img src="assets/icons/Arrow.svg" alt="">
+                    </button>
                 </div>
             </div>
         </section>
@@ -196,22 +219,27 @@
                 <h2 id="dessert-title" class="products__title">OUR SPECIAL DESSERT</h2>
                 
                 <div class="carousel">
+                    <!-- Flecha Izquierda -->
+                    <button class="carousel__arrow carousel__arrow--left" aria-label="Anterior" aria-hidden="true" tabindex="-1">
+                        <img src="assets/icons/Arrow.svg" alt="">
+                    </button>
+
                     <ul class="carousel__track">
                         <!-- Postre 1 -->
                         <li class="carousel__slide">
                             <article class="product-card">
                                 <div class="product-card__img-wrapper">
                                     <!-- ATENCIÓN: Cambiá "dessert-1.avif" por el nombre real de tu foto -->
-                                    <img src="assets/coffee-6.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
+                                    <img src="assets/img/coffee-6.avif" alt="Cheesecake" class="product-card__img" loading="lazy">
                                     <label class="product-card__fav">
                                         <input type="checkbox" class="sr-only">
-                                        <img src="assets/icons/Heart.svg" alt="Añadir a favoritos" class="fav-icon">
+                                        <img src="assets/icons/heart.svg" alt="Añadir a favoritos" class="fav-icon">
                                     </label>
                                 </div>
                                 <h3 class="product-card__title">Lungo coffee</h3>
-                                <p class="product-card__desc">Strong and bold espresso-based drink with a longer extraction.</p>
+                                <p class="product-card__desc">Classic creamy cheesecake with a graham cracker crust.</p>
                                 <div class="product-card__footer">
-                                    <data value="250" class="product-card__price">Rs. 250</data>
+                                    <data value="300" class="product-card__price">Rs. 300</data>
                                     <button class="product-card__btn">Order Now</button>
                                 </div>
                             </article>
@@ -225,7 +253,7 @@
                                     <img src="assets/img/coffee-7.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
                                     <label class="product-card__fav">
                                         <input type="checkbox" class="sr-only">
-                                        <img src="assets/icons/Heart.svg" alt="Añadir a favoritos" class="fav-icon">
+                                        <img src="assets/icons/heart.svg" alt="Añadir a favoritos" class="fav-icon">
                                     </label>
                                 </div>
                                 <h3 class="product-card__title">Lungo coffee</h3>
@@ -242,10 +270,10 @@
                             <article class="product-card">
                                 <div class="product-card__img-wrapper">
                                     <!-- ATENCIÓN: Cambiá "dessert-1.avif" por el nombre real de tu foto -->
-                                    <img src="assets/coffee-8.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
+                                    <img src="assets/img/coffee-8.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
                                     <label class="product-card__fav">
                                         <input type="checkbox" class="sr-only">
-                                        <img src="assets/icons/Heart.svg" alt="Añadir a favoritos" class="fav-icon">
+                                        <img src="assets/icons/heart.svg" alt="Añadir a favoritos" class="fav-icon">
                                     </label>
                                 </div>
                                 <h3 class="product-card__title">Lungo coffee</h3>
@@ -262,10 +290,10 @@
                             <article class="product-card">
                                 <div class="product-card__img-wrapper">
                                     <!-- ATENCIÓN: Cambiá "dessert-1.avif" por el nombre real de tu foto -->
-                                    <img src="assets/coffee-9.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
+                                    <img src="assets/img/coffee-9.avif" alt="Lungo coffee" class="product-card__img" loading="lazy">
                                     <label class="product-card__fav">
                                         <input type="checkbox" class="sr-only">
-                                        <img src="assets/icons/Heart.svg" alt="Añadir a favoritos" class="fav-icon">
+                                        <img src="assets/icons/heart.svg" alt="Añadir a favoritos" class="fav-icon">
                                     </label>
                                 </div>
                                 <h3 class="product-card__title">Lungo coffee</h3>
@@ -277,6 +305,11 @@
                             </article>
                         </li>
                     </ul>
+
+                    <!-- Flecha Derecha -->
+                    <button class="carousel__arrow carousel__arrow--right" aria-label="Siguiente" aria-hidden="true" tabindex="-1">
+                        <img src="assets/icons/Arrow.svg" alt="">
+                    </button>
                 </div>
             </div>
         </section>
@@ -287,6 +320,7 @@
                 <!-- R1: Imágenes decorativas a los lados (ocultas en mobile por CSS) -->
                 <!-- Cambiá "promo-hand.avif" y "promo-beans.avif" por tus nombres -->
                 <img src="assets/img/promo-hand.avif" alt="" class="promo__img promo__img--left" loading="lazy" aria-hidden="true">
+                <img src="assets/img/promo-beans.avif" alt="" class="promo__img promo__img--right" loading="lazy" aria-hidden="true">
                 
                 <div class="promo__content">
                     <!-- R2: Título en 2 líneas -->
@@ -294,12 +328,10 @@
                     <!-- R3: Botón pill con chevrons -->
                     <a href="#beans" class="promo__btn">
                         Explore Our Products
-                        <!-- Cambiá "Arrow.svg" si tu ícono de doble flecha se llama distinto -->
-                        <img src="assets/icons/Arrow.svg" alt="" class="promo__btn-icon" aria-hidden="true">
+                        <img src="assets/icons/Frame 14.svg" alt="" class="promo__btn-icon" aria-hidden="true">
                     </a>
                 </div>
 
-                <img src="assets/img/promo-beans.avif" alt="" class="promo__img promo__img--right" loading="lazy" aria-hidden="true">
             </div>
         </section>
 
@@ -320,7 +352,13 @@
                                 <figcaption class="testimonial-card__name">James Smith</figcaption>
                                 <span class="testimonial-card__role">Entrepreneur</span>
                             </div>
-                            <img src="assets/icons/star.svg" alt="5 estrellas" class="testimonial-card__rating" aria-label="5 de 5 estrellas">
+                            <div class="testimonial-card__rating" role="img" aria-label="4 de 5 estrellas">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--muted">
+                            </div>
                         </div>
                         <blockquote class="testimonial-card__text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -330,12 +368,18 @@
                     <!-- Tarjeta 2 (Destacada en el centro) -->
                     <figure class="testimonial-card testimonial-card--featured">
                         <div class="testimonial-card__header">
-                            <img src="assets/img/avatar-2.avif" alt="James Smith" class="testimonial-card__avatar" loading="lazy">
+                            <img src="assets/img/avatar-1.avif" alt="James Smith" class="testimonial-card__avatar" loading="lazy">
                             <div class="testimonial-card__info">
                                 <figcaption class="testimonial-card__name">James Smith</figcaption>
                                 <span class="testimonial-card__role">Entrepreneur</span>
                             </div>
-                            <img src="assets/icons/star.svg" alt="5 estrellas" class="testimonial-card__rating" aria-label="5 de 5 estrellas">
+                            <div class="testimonial-card__rating" role="img" aria-label="5 de 5 estrellas">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                            </div>
                         </div>
                         <blockquote class="testimonial-card__text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -345,12 +389,18 @@
                     <!-- Tarjeta 3 -->
                     <figure class="testimonial-card">
                         <div class="testimonial-card__header">
-                            <img src="assets/img/avatar-3.avif" alt="James Smith" class="testimonial-card__avatar" loading="lazy">
+                            <img src="assets/img/avatar-1.avif" alt="James Smith" class="testimonial-card__avatar" loading="lazy">
                             <div class="testimonial-card__info">
                                 <figcaption class="testimonial-card__name">James Smith</figcaption>
                                 <span class="testimonial-card__role">Entrepreneur</span>
                             </div>
-                            <img src="assets/icons/star.svg" alt="5 estrellas" class="testimonial-card__rating" aria-label="5 de 5 estrellas">
+                            <div class="testimonial-card__rating" role="img" aria-label="3 de 5 estrellas">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--active">
+                                <img src="assets/icons/star.svg" alt="" class="star star--muted">
+                                <img src="assets/icons/star.svg" alt="" class="star star--muted">
+                            </div>
                         </div>
                         <blockquote class="testimonial-card__text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -440,7 +490,7 @@
                     <li><a href="#" aria-label="Twitter"><img src="assets/icons/social-x.svg" alt=""></a></li>
                     <li><a href="#" aria-label="Instagram"><img src="assets/icons/social-instagram.svg" alt=""></a></li>
                     <li><a href="#" aria-label="Facebook"><img src="assets/icons/social-facebook.svg" alt=""></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><img src="assets/icons/social-linkedin.svg" alt=""></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><img src="assets/icons/Linkedin.svg" alt=""></a></li>
                 </ul>
             </div>
         </div>

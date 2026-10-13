@@ -61,10 +61,8 @@
 }
 
 .promo__btn-icon {
-    width: 20px;
+    width: 28px;
     height: 20px;
-    /* Rotamos la flecha si por defecto apunta hacia la izquierda o arriba en el SVG */
-    transform: rotate(180deg); 
 }
 
 /* R1: Imágenes decorativas posicionadas de forma absoluta */
@@ -83,14 +81,14 @@
     }
     
     .promo__img--left {
-        left: -100px; /* Ajuste para que se asome desde el borde */
+        left: -180px;
         height: 100%;
         max-width: 520px;
         object-fit: contain;
     }
     
     .promo__img--right {
-        right: -50px;
+        right: -180px;
         height: 100%;
         max-width: 503px;
         object-fit: contain;

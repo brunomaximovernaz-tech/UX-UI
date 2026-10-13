@@ -5,6 +5,8 @@ Landing page estática para una cafetería, desarrollada como trabajo práctico 
 **Materia:** Diseño UX/UI — 2026  
 **Carrera:** Licenciatura en Sistemas de Información (UADER FCyT)
 
+**Sitio publicado:** [tp4-landing-coffea.netlify.app](https://tp4-landing-coffea.netlify.app/)
+
 ## Contenido
 
 - Hero y navegación responsive: menú desplegable en móvil y enlaces horizontales en escritorio.
@@ -29,4 +31,11 @@ Abrí `index.html` en un navegador. Para probar el formulario de newsletter, pub
 
 ## Publicación en Netlify
 
-El archivo `netlify.toml` configura la carpeta actual como directorio de publicación (`publish = "."`). Al conectar este proyecto en Netlify, usá `TP4` como base y directorio de publicación; no hace falta un comando de build.
+El archivo `netlify.toml` configura la carpeta del proyecto como directorio de publicación (`publish = "."`). Para desplegarlo desde la raíz del repositorio, usá `TP4` como directorio base y `.` como directorio de publicación, sin comando de build.
+
+También se puede publicar la carpeta `TP4` directamente con Netlify CLI:
+
+```bash
+cd TP4
+netlify deploy --prod --dir .
+```

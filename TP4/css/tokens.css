@@ -1,0 +1,50 @@
+:root {
+    /* === COLORES === */
+    --color-espresso: #30261C;
+    --color-maroon: #2A0000;
+    --color-sand: #E2D9C8;
+    --color-sand-20: rgba(226, 217, 200, 0.2);
+    --color-sand-40: rgba(226, 217, 200, 0.4);
+    --color-bg: #F1F0EE;
+    --color-muted: #544A3E;
+    --color-border-soft: rgba(48, 38, 28, 0.1);
+    --color-text-soft: rgba(48, 38, 28, 0.7);
+    --color-white: #FFFFFF;
+
+    /* === TIPOGRAFÍAS === */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-ui: 'Poppins', sans-serif;
+    --font-accent: 'Reggae One', cursive;
+
+    /* === ESCALA TIPOGRÁFICA === */
+    --fs-hero: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem); /* Fluido para responsive */
+    --fs-h2: 2rem;       /* 32px */
+    --fs-cta: 2.5rem;    /* 40px */
+    --fs-card-title: 2.375rem; /* 38px */
+    --fs-logo: 2rem;     /* 32px */
+    --fs-footer-h: 1.5rem; /* 24px */
+    --fs-lg: 1.25rem;    /* 20px */
+    --fs-md: 1.125rem;   /* 18px */
+    --fs-base: 1rem;     /* 16px */
+    --fs-sm: 0.875rem;   /* 14px */
+    --fs-xs: 0.75rem;    /* 12px */
+
+    /* === FORMA Y ESPACIO === */
+    --radius-pill: 100px;
+    --radius-card: 18px;
+    --radius-img: 12px;
+    --radius-btn: 8px;
+    --container: 1444px;
+
+    /* Espaciados observados (escala básica) */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-28: 28px;
+    --space-40: 40px;
+    --space-56: 56px;
+    --space-64: 64px;
+}

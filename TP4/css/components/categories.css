@@ -1,0 +1,74 @@
+/* =========================================
+   5.3 Categorías
+   ========================================= */
+
+.categories {
+    background-color: var(--color-sand);
+    /* En mobile usamos padding para dar respiro */
+    padding: var(--space-40) 0;
+    display: flex;
+    align-items: center;
+}
+
+.categories__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* R2: En mobile usamos una grilla de 2x2 para que entren bien (Sección 7) */
+.categories__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-40);
+    width: 100%;
+    max-width: 845px; /* Tope máximo según diseño */
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-16);
+}
+
+/* R2: Ícono de 82px */
+.category-item__icon {
+    width: 82px;
+    height: 82px;
+}
+
+/* R2: Etiqueta Poppins 500 18px */
+.category-item__label {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-md);
+    color: var(--color-muted);
+    /* Transición suave para el hover */
+    transition: color 0.2s ease;
+}
+
+/* Interacciones requeridas en PRD (Sección 8): Cambio de color en hover */
+@media (hover: hover) {
+    .category-item:hover .category-item__label {
+        color: var(--color-espresso);
+    }
+}
+
+/* === DESKTOP RESPONSIVE (>= 768px) === */
+@media (min-width: 768px) {
+    .categories__list {
+        /* R3: Pasamos a Flexbox para la separación uniforme en fila */
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .categories {
+        /* R1: Alto exacto de 220px en Desktop */
+        height: 220px;
+        padding: 0;
+    }
+}

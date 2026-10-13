@@ -1,0 +1,144 @@
+/* =========================================
+   5.1 Header / navegación
+   ========================================= */
+
+/* R4: Posicionamiento absoluto sobre el hero */
+.header {
+    position: absolute;
+    top: 20px; /* Margen superior base para mobile */
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Asegura que quede por encima de todo */
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* R1: Logo (Playfair 700, 32px, blanco) */
+.header__logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-logo);
+    color: var(--color-white);
+    text-transform: capitalize;
+}
+
+/* R3: Botón de búsqueda circular blanco */
+.header__search {
+    width: 44px; /* Tamaño táctil recomendado en mobile */
+    height: 44px;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* === MENÚ MOBILE (SIN JS - Detalles en sección 7 y 8) === */
+.header__menu {
+    position: static; 
+}
+
+.header__menu-toggle {
+    display: block;
+    list-style: none; /* Quita la flechita nativa del details */
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Quita la flecha nativa en navegadores webkit (Chrome/Safari) */
+.header__menu-toggle::-webkit-details-marker {
+    display: none; 
+}
+
+/* Dibujo del icono hamburguesa solo con CSS */
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white);
+    position: relative;
+}
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white);
+    left: 0;
+}
+.hamburger::before { top: -6px; }
+.hamburger::after { top: 6px; }
+
+/* Navegación colapsada por defecto (Mobile) */
+.header__nav {
+    display: none; 
+    position: absolute;
+    top: 100%; /* Se despliega justo debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-espresso); /* Fondo para que contraste en mobile */
+    padding: var(--space-24) 0;
+}
+
+/* Cuando el <details> recibe clic (estado abierto), mostramos el nav */
+.header__menu[open] .header__nav {
+    display: block;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-24);
+}
+
+/* R2: Estilos de los links (Poppins 500 18px uppercase) */
+.header__nav-list a {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-md);
+    color: var(--color-white);
+    text-transform: uppercase;
+    padding: var(--space-8);
+}
+.header__nav-list .nav-login {
+    font-weight: 600; /* Login va en negrita */
+}
+
+
+/* === DESKTOP RESPONSIVE (>= 1024px) === */
+@media (min-width: 1024px) {
+    .header {
+        top: 55px; /* R4: A 55px del borde superior en Desktop */
+    }
+
+    .header__search {
+        width: 61px; /* R3: Tamaño original de 61px en Desktop */
+        height: 61px;
+    }
+
+    .header__menu-toggle {
+        display: none; /* Escondemos la hamburguesa en pantallas grandes */
+    }
+
+    /* Forzamos a que la navegación siempre esté visible en desktop, 
+       sin importar si el <details> está abierto o cerrado */
+    .header__nav,
+    .header__menu:not([open]) .header__nav {
+        display: block;
+        position: static;
+        background-color: transparent; /* Quitamos el fondo oscuro */
+        padding: 0;
+    }
+
+    .header__nav-list {
+        flex-direction: row; /* Links en fila horizontal */
+        gap: 48px;
+    }
+}

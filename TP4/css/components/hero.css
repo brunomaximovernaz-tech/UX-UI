@@ -1,0 +1,95 @@
+/* =========================================
+   5.2 Hero
+   ========================================= */
+
+.hero {
+    position: relative;
+    /* R1: Alto min 100vh para mobile */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* R1 y CA: Imagen alineada a la derecha con object-fit cover (vía background) + overlay oscuro para contraste AA */
+    /* ATENCIÓN: Asegurate que la ruta "hero.avif" coincida con el nombre de tu foto de fondo en la carpeta img */
+    background: linear-gradient(rgba(48, 38, 28, 0.4), rgba(48, 38, 28, 0.4)), 
+                url('../../assets/img/coffee-1.avif') right center / cover no-repeat;
+    background-color: var(--color-espresso); /* Fallback */
+}
+
+.hero__container {
+    width: 100%;
+    /* R2: En mobile damos espacio para que el header absoluto no tape el texto */
+    padding-top: 120px; 
+    padding-bottom: 60px;
+}
+
+/* R2: Bloque de texto de max 557px */
+.hero__content {
+    max-width: 557px;
+    color: var(--color-white);
+}
+
+/* R3: Eyebrow (Outfit 500, 20px, tracking 4px) */
+.hero__eyebrow {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: var(--fs-lg);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: var(--space-40);
+}
+
+/* R3: H1 (Playfair 700, 72/82px en desktop - manejado vía el clamp() de --fs-hero) */
+.hero__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-hero); 
+    line-height: 1.14; /* 82/72 = 1.138 */
+    margin-bottom: var(--space-56);
+}
+
+/* R3: Párrafo (Outfit 400, 18/26px, máx 431px) */
+.hero__description {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: var(--fs-md);
+    line-height: 1.44; /* 26/18 = 1.44 */
+    max-width: 431px;
+    margin-bottom: var(--space-56);
+}
+
+/* R4: Botón "Order Now" (blanco, radio pill, padding 16x40px, texto espresso) */
+.hero__btn {
+    display: inline-block;
+    background-color: var(--color-white);
+    color: var(--color-espresso);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: var(--fs-md);
+    padding: var(--space-16) var(--space-40);
+    border-radius: var(--radius-pill);
+    /* Interacción sin JS: Leve elevación en hover (Sección 8) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+    .hero__btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* R1 y R2: Ajustes exactos para Desktop (xl) */
+@media (min-width: 1440px) {
+    .hero {
+        /* R1: Tope en 1000px en desktop */
+        min-height: auto;
+        height: 1000px;
+    }
+
+    .hero__container {
+        /* R2: Texto a 294px del borde superior */
+        padding-top: 294px; 
+        padding-bottom: 0;
+        align-items: flex-start;
+    }
+}

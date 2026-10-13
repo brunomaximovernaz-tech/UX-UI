@@ -1,0 +1,108 @@
+/* =========================================
+   Tarjeta de Producto (Product Card)
+   ========================================= */
+
+.product-card {
+    background-color: var(--color-sand-20);
+    border: 1.5px solid var(--color-sand);
+    border-radius: var(--radius-card);
+    padding: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Interacción hover visual en PC */
+@media (hover: hover) {
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.product-card__img-wrapper {
+    position: relative;
+    border-radius: var(--radius-img);
+    overflow: hidden;
+    /* Relación de aspecto del Figma (334x364) */
+    aspect-ratio: 334 / 364;
+}
+
+.product-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+    .product-card:hover .product-card__img {
+        transform: scale(1.03); /* Zoom sutil pedido en PRD */
+    }
+}
+
+/* Botón de favorito sin JS */
+.product-card__fav {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    z-index: 2;
+}
+
+/* Efecto al marcar el corazón */
+.product-card__fav input:checked + .fav-icon {
+    /* Acá podés aplicar un filtro CSS para que se vuelva sólido, o cambiar la imagen base */
+    filter: invert(15%) sepia(90%) saturate(6000%) hue-rotate(350deg) brightness(90%) contrast(110%);
+}
+
+.product-card__title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--fs-card-title);
+    color: var(--color-espresso);
+}
+
+.product-card__desc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: var(--fs-lg); /* 20px */
+    color: var(--color-maroon);
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.product-card__price {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--fs-lg);
+    color: var(--color-maroon);
+}
+
+.product-card__btn {
+    background-color: var(--color-maroon);
+    color: var(--color-white);
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    padding: 10px 26px;
+    border-radius: var(--radius-btn);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.product-card__btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,98 @@
+/* =========================================
+   5.6 CTA granos de café
+   ========================================= */
+
+.promo {
+    /* R1: Fondo arena */
+    background-color: var(--color-sand);
+    position: relative;
+    overflow: hidden; /* Para que las imágenes laterales no generen scroll horizontal */
+    padding: var(--space-56) 0;
+}
+
+.promo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* R1: Alto de 335px en desktop, pero en mobile dejamos que fluya el contenido */
+    min-height: 335px; 
+}
+
+.promo__content {
+    /* R2: Texto y botón centrados, máx 372px */
+    max-width: 372px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.promo__title {
+    /* R2: Título Playfair 600 40/50px negro */
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--fs-cta);
+    line-height: 1.25; /* 50/40 = 1.25 */
+    color: #000000; /* Especificado en PRD como negro, no espresso */
+    margin-bottom: var(--space-40);
+}
+
+.promo__btn {
+    /* R3: Botón pill --color-espresso */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-12);
+    background-color: var(--color-espresso);
+    color: var(--color-bg);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: var(--fs-base);
+    padding: 16px 40px;
+    border-radius: var(--radius-pill);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) {
+    .promo__btn:hover {
+        background-color: var(--color-maroon);
+        transform: translateY(-2px);
+    }
+}
+
+.promo__btn-icon {
+    width: 20px;
+    height: 20px;
+    /* Rotamos la flecha si por defecto apunta hacia la izquierda o arriba en el SVG */
+    transform: rotate(180deg); 
+}
+
+/* R1: Imágenes decorativas posicionadas de forma absoluta */
+.promo__img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* CA: Ocultas en mobile para no romper el layout */
+    z-index: 1;
+}
+
+/* Mostrar imágenes laterales a partir de pantallas medianas (Tablet/Desktop) */
+@media (min-width: 1024px) {
+    .promo__img {
+        display: block;
+    }
+    
+    .promo__img--left {
+        left: -100px; /* Ajuste para que se asome desde el borde */
+        height: 100%;
+        max-width: 520px;
+        object-fit: contain;
+    }
+    
+    .promo__img--right {
+        right: -50px;
+        height: 100%;
+        max-width: 503px;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,25 @@
+/* Definición del orden de las capas */
+@layer tokens, base, layout, components, utilities;
+
+/* 1. Variables globales */
+@import url('tokens.css') layer(tokens);
+
+/* 2. Reseteo y estilos base */
+@import url('base.css') layer(base);
+
+/* 3. Estructura general (contenedores) */
+@import url('layout.css') layer(layout);
+
+/* 4. Componentes (Secciones específicas) */
+@import url('components/header.css') layer(components);
+@import url('components/hero.css') layer(components);
+@import url('components/categories.css') layer(components);
+@import url('components/product-card.css') layer(components);
+@import url('components/carousel.css') layer(components);
+@import url('components/promo.css') layer(components);
+@import url('components/testimonial-card.css') layer(components);
+@import url('components/newsletter.css') layer(components);
+@import url('components/footer.css') layer(components);
+
+/* 5. Utilidades y helpers */
+@import url('utilities.css') layer(utilities);

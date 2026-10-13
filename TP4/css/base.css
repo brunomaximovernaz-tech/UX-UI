@@ -1,0 +1,53 @@
+/* Reseteo moderno del box model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Reseteo de márgenes y paddings por defecto */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuración general del documento */
+body {
+    min-height: 100vh;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    background-color: var(--color-bg);
+    color: var(--color-espresso);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Quitar bullets de las listas por defecto */
+ul, ol {
+    list-style: none;
+}
+
+/* Enlaces base */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Imágenes responsivas */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Accesibilidad: Foco visible */
+:focus-visible {
+    outline: 2px solid var(--color-espresso);
+    outline-offset: 3px;
+}
+
+/* Accesibilidad: Reducir animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}

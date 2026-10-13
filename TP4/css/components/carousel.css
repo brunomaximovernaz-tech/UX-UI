@@ -1,0 +1,60 @@
+/* =========================================
+   Carrusel (Estructura deslizable)
+   ========================================= */
+
+.products {
+    padding: var(--space-64) 0;
+}
+
+/* Título de sección centrado */
+.products__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--fs-h2);
+    text-transform: uppercase;
+    letter-spacing: 1.28px;
+    color: var(--color-espresso);
+    text-align: center;
+    margin-bottom: var(--space-64);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    /* Centrado máximo para desktop grande */
+    max-width: 1476px;
+    margin: 0 auto;
+}
+
+.carousel__track {
+    display: flex;
+    gap: var(--space-4);
+    /* Scroll horizontal nativo */
+    overflow-x: auto;
+    /* Comportamiento de "imán" al hacer swipe */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* Ocultar scrollbar en navegadores */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE y Edge */
+    padding-bottom: var(--space-16); /* Espacio para la sombra de las cards */
+}
+
+.carousel__track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel__slide {
+    /* En mobile mostramos 1 y un pedacito de la siguiente para que se sepa que hay scroll */
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+}
+
+/* Responsividad para Tablet y Desktop */
+@media (min-width: 768px) {
+    .carousel__slide { flex: 0 0 calc(50% - var(--space-4)); }
+}
+
+@media (min-width: 1024px) {
+    .carousel__slide { flex: 0 0 calc(25% - (var(--space-4) * 3 / 4)); }
+}

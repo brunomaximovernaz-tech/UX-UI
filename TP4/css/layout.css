@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    /* Mobile por defecto (base): Ancho total menos 16px de padding por lado */
+    padding-inline: 16px;
+    margin-inline: auto;
+}
+
+/* Tablet (md) */
+@media (min-width: 768px) {
+    .container {
+        padding-inline: 32px;
+    }
+}
+
+/* Desktop pequeño (lg) */
+@media (min-width: 1024px) {
+    .container {
+        padding-inline: 48px;
+    }
+}
+
+/* Desktop grande (xl) - tope del diseño */
+@media (min-width: 1440px) {
+    .container {
+        max-width: var(--container);
+        padding-inline: 0; /* Ya no necesita padding porque tiene el max-width */
+    }
+}

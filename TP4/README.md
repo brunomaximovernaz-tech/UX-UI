@@ -31,7 +31,7 @@ Abrí `index.html` en un navegador. Para probar el formulario de newsletter, pub
 
 ## Publicación en Netlify
 
-El archivo `netlify.toml` configura la carpeta del proyecto como directorio de publicación (`publish = "."`). Para desplegarlo desde la raíz del repositorio, usá `TP4` como directorio base y `.` como directorio de publicación, sin comando de build.
+El archivo `../netlify.toml` configura `TP4` como directorio base y `.` como directorio de publicación. Así Netlify puede desplegar automáticamente desde la raíz del repositorio conectado a GitHub, sin comando de build.
 
 También se puede publicar la carpeta `TP4` directamente con Netlify CLI:
 

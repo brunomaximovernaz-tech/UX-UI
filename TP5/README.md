@@ -1,27 +1,29 @@
-# TP5: Flujo de Contratación Digital de Seguros 🛡️📱
+# TP5: Flujo de Contratación Digital de Seguros
 
-Este es el Trabajo Práctico de maquetación avanzada y manejo de estados en JavaScript para la materia de Diseño UX/UI (Licenciatura en Sistemas, UADER).
+Este es mi Trabajo Práctico 5 para la materia Diseño UX/UI (Licenciatura en Sistemas, UADER)[cite: 1]. El objetivo del TP fue armar el front-end de un checkout para contratar seguros digitales, maquetando un diseño en Figma y manejando todo el flujo en JavaScript.
 
-## 🔗 Despliegue en Producción
-**URL del sitio en Netlify:** [Tu link de Netlify va aquí]
+## 🔗 Link del proyecto
+Acá está la versión subida a producción: (https://tp5seguros.netlify.app/)
 
-## 🛠️ Stack Tecnológico
-* **Estructura:** HTML5 semántico[cite: 1].
-* **Estilos:** Tailwind CSS v4 + Basecoat UI (vía CDN)[cite: 1, 3].
-* **Lógica:** JavaScript Vanilla (Módulos ES6)[cite: 1, 3].
-* **Arquitectura:** Manejo de un estado global único (`solicitud`) sin recargas de página[cite: 2, 8].
+## 🛠️ Tecnologías que usé
+* **HTML5** (Semántico)
+* **CSS:** Tailwind CSS v4 y Basecoat UI (cargados por CDN)[cite: 1, 3].
+* **JavaScript:** Vanilla JS puro usando módulos ES6 (sin React ni otros frameworks)[cite: 1, 3].
 
-## 📝 Descripción y Decisiones Técnicas
-* Se implementó el flujo lineal de 4 pasos (Cotizar, Plan, Datos, Pago) más pantallas de Éxito/Error en un solo archivo `index.html`, alternando visibilidad con JS[cite: 10].
-* Los datos de los planes se obtienen asíncronamente desde un archivo local `data/planes.json`[cite: 2].
-* Los estilos visuales se sobrescribieron en `css/tokens.css` para lograr una fidelidad visual exacta con el Figma provisto, forzando modo claro y tipografía Inter[cite: 4].
-* Se utilizó la validación recomendada (`blur` e `input`) para habilitar dinámicamente los botones de continuación, validando mediante Regex y funciones puras[cite: 6, 15].
+## 📝 Resumen del desarrollo
+El proyecto está armado en un solo archivo `index.html` donde las 7 pantallas (Inicio, Cotizar, Elegir Plan, Datos, Pago, Éxito y Error) se van ocultando o mostrando usando JavaScript y el atributo `hidden`[cite: 10]. 
 
-## ✨ Bonus Implementados
-* **Persistencia de Datos:** Se implementó `localStorage` para guardar el avance del usuario. Si la página se recarga accidentalmente, el flujo y los datos ingresados no se pierden[cite: 16].
-* **Máscara de Input:** Se implementó formateo automático en tiempo real para el número de tarjeta (agregando un espacio cada 4 dígitos)[cite: 16].
+* **El estado:** Manejé todo el flujo con un único objeto global `solicitud`.
+* **Datos y cálculos:** Los planes se traen de forma asíncrona desde un archivo `planes.json`[cite: 2] y la cuota se calcula en el momento según la antigüedad del equipo.
+* **Diseño:** Sobrescribí los tokens de CSS para igualar exactamente el modo claro y los colores primarios del Figma que nos pasó la cátedra, incluyendo la tipografía Inter[cite: 4].
+* **Validaciones:** Agregué validaciones en línea (`blur` e `input`) usando Regex para que los botones de avanzar solo se habiliten si el formulario está perfecto[cite: 6, 15].
 
-## 📱 Capturas de Pantalla
-_(Agregá acá una captura de la versión Mobile y otra de la versión Desktop de tu proyecto)_[cite: 1, 15]
+## ✨ Extras (Bonus)
+Le agregué un par de funcionalidades extra para mejorar la experiencia:
+1. **Persistencia (localStorage):** Los datos se van guardando mientras avanzás. Si apretás F5 por error, no perdés el progreso de la cotización[cite: 16].
+2. **Máscara de input:** Le armé una máscara al campo de la tarjeta de crédito para que agregue espacios automáticamente cada 4 números[cite: 16].
 
-git push --set-upstream origin main
+## 📱 Vistas del proyecto
+_
+![alt text]({32CA6F66-53D7-45A1-95CB-F0843AFF8047}.png)
+![alt text]({046256E8-243E-4442-B250-50EB05754D38}.png)

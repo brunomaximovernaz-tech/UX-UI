@@ -291,8 +291,81 @@
           </div>
         </div>
       </section>
-      <section id="experiencia" aria-label="Experiencia"></section>
-      <section id="sobre-mi" aria-label="Sobre mí"></section>
+      <section id="experiencia" aria-labelledby="experiencia-title" class="bg-slate-50 px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-12 text-center">
+            <h2 id="experiencia-title" class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Experiencia</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+              Mi recorrido académico y las experiencias que contribuyen a mi crecimiento profesional.
+            </p>
+          </div>
+
+          <ol class="relative border-s border-slate-300">
+            <li class="relative ms-8 pb-12 last:pb-0">
+              <span aria-hidden="true" class="absolute -start-[2.55rem] top-1 flex h-5 w-5 items-center justify-center rounded-full border-4 border-slate-50 bg-blue-600"></span>
+              <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <p class="text-sm font-semibold text-blue-700">
+                  <time datetime="2024">2024</time> – <time datetime="2026">Presente</time>
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-slate-900">Estudiante de Sistemas</h3>
+                <p class="mt-1 font-medium text-slate-600">Formación académica</p>
+                <ul class="mt-4 list-inside list-disc space-y-2 text-slate-600 marker:text-blue-600">
+                  <li>Desarrollo de proyectos académicos de diseño y programación.</li>
+                  <li>Aplicación de fundamentos de desarrollo web, bases de datos y resolución de problemas.</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="relative ms-8">
+              <span aria-hidden="true" class="absolute -start-[2.55rem] top-1 flex h-5 w-5 items-center justify-center rounded-full border-4 border-slate-50 bg-blue-600"></span>
+              <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <p class="text-sm font-semibold text-blue-700">
+                  <time datetime="2025">2025</time> – <time datetime="2026">2026</time>
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-slate-900">Proyectos de Diseño UX/UI y Front-end</h3>
+                <p class="mt-1 font-medium text-slate-600">Proyectos académicos y personales</p>
+                <ul class="mt-4 list-inside list-disc space-y-2 text-slate-600 marker:text-blue-600">
+                  <li>Diseño de interfaces y prototipos considerando las necesidades de las personas usuarias.</li>
+                  <li>Maquetación de páginas responsive con HTML semántico y Tailwind CSS.</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="sobre-mi" aria-labelledby="sobre-mi-title" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+            <div>
+              <h2 id="sobre-mi-title" class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Sobre mí</h2>
+              <p class="mt-6 text-lg leading-8 text-slate-600">
+                Soy Bruno, estudiante de Sistemas y desarrollador Front-end en formación. Me interesa crear experiencias digitales accesibles y fáciles de usar, combinando diseño y código. Disfruto aprender, trabajar en equipo y transformar ideas en soluciones concretas.
+              </p>
+            </div>
+            <div
+              role="img"
+              aria-label="Espacio reservado para una foto de Bruno Vernaz"
+              class="aspect-[4/3] rounded-3xl border border-slate-200 bg-slate-200"
+            ></div>
+          </div>
+
+          <ul class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold text-slate-900">Accesibilidad</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Diseño para que más personas puedan usar cada experiencia.</p>
+            </li>
+            <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold text-slate-900">Código claro</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Priorizo soluciones legibles, mantenibles y bien estructuradas.</p>
+            </li>
+            <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold text-slate-900">Diseño centrado en las personas</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Busco comprender necesidades reales antes de proponer soluciones.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section id="contacto" aria-label="Contacto"></section>
     </main>
 

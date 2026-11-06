@@ -13,3 +13,8 @@ Este es el repositorio de mi Trabajo Final para la materia Diseño UX/UI (Licenc
 
 ## 📝 Declaración de uso de IA
 Para la construcción de este proyecto, se utilizó GitHub Copilot estrictamente como asistente de maquetación y generación de código base en Tailwind CSS[cite: 17]. Todos los comandos de Git, la estructura de información, el diseño visual y las revisiones de accesibilidad fueron realizadas y validadas por el autor original del repositorio[cite: 17].
+
+## 📸 Evidencias
+
+![Reporte Lighthouse](lighthouse.png)
+![Captura Portfolio](captura.png)

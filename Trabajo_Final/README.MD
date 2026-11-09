@@ -1,10 +1,11 @@
 # Portfolio Web Personal - Trabajo Final UX/UI 🚀
 
-Este es el repositorio de mi Trabajo Final para la materia Diseño UX/UI (Licenciatura en Sistemas, UADER)[cite: 12].
+Este es el repositorio de mi Trabajo Final para la materia Diseño UX/UI (Licenciatura en Sistemas, UADER)
+*
 
 ## 🔗 Enlaces del Proyecto
 * **URL en Producción (Netlify):** [Reemplazar con tu link de Netlify]
-* **Prototipo y Design System (Figma):** [Reemplazar con tu link público de Figma][cite: 16]
+* **Prototipo y Design System (Figma):** [Reemplazar con tu link público de Figma]
 
 ## 🛠️ Stack Tecnológico
 * HTML5 Semántico
@@ -17,4 +18,7 @@ Para la construcción de este proyecto, se utilizó GitHub Copilot estrictamente
 ## 📸 Evidencias
 
 ![Reporte Lighthouse](lighthouse.png)
-![Captura Portfolio](captura.png)
+![Captura Portfolio](captura.png)S
+
+
+# al proyecto le falta la implementacion de figma 3 commits y subirlo a netfly 
